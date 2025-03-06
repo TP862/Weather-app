@@ -1,3 +1,4 @@
+'''
 import python_weather
 
 import asyncio
@@ -24,8 +25,9 @@ if __name__ == '__main__':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 asyncio.run(getweather())
+'''
 
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for,request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -44,14 +46,17 @@ class weather(db.Model):
   def __repr__(self):
     return '<Region %r>' % self.region
   
-  with app.app_context():
+  #with app.app_context():
 
-        db.create_all()
+        #db.create_all()
 
 
-@app.route('/')
+@app.route('/', methods=['POST','GET'])
 def index():
-  return render_template('index.html')
+  if request.method == 'POST':
+    return 'Hello World'
+  else:
+    return render_template('index.html')
 
 if __name__ == "__main__":
   app.run(debug=True)

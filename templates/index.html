@@ -1,9 +1,37 @@
 {% extends 'base.html' %}
 
 {% block head %}
-
+<title>Weather Data App</title>
 {% endblock %}
 
 {% block body %} 
-<h1>WHATS THE WEATHER</h1>
+<div class="weather">
+    <h1>Recorded Weather Data</h1>
+
+    <table>
+        <tr>
+            <th>Temperature</th>
+            <th>Pressure</th>
+            <th>Humidity</th>
+            <th>Region</th>
+            <th>Date Recorded</th>
+            <th>Delete Record</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <a href="">Delete</a>
+            </td>
+        </tr>
+    </table>
+
+    <form action="/" method="POST">
+        <input type="text" name="name" id="cityname">
+        <input type="submit" value="Get Weather Data">
+    </form>
+</div>
 {% endblock %}
