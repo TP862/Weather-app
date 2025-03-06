@@ -1,3 +1,5 @@
+import getweather from main.py
+
 const button = document.createElement('button')
 button.innerText = 'can you click me'
 
@@ -42,3 +44,4 @@ function getJsonData() {
         console.error('Error reading json file: ', error)
     });
 }
+
