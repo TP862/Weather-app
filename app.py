@@ -27,6 +27,8 @@ if __name__ == '__main__':
 asyncio.run(getweather())
 '''
 
+#FIX THE WEATHER DATA GETTING CODE
+
 from flask import Flask, render_template, url_for,request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
