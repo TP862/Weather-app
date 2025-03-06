@@ -1,5 +1,6 @@
 {
-    "temp": 21,
-    "pressure": 1012.0,
-    "humidity": 78
+    "temp": 27,
+    "pressure": 1015.0,
+    "humidity": 42,
+    "region": "Western Cape"
 }
