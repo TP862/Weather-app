@@ -13,8 +13,7 @@ async def getweather() -> None:
       "temp" : weather.temperature,
       "pressure" : weather.pressure,
       "humidity" : weather.humidity,
-      "region" : weather.region,
-      "time" : weather.datetime
+      "region" : weather.region
     }
 
     with open("data.json", "w") as json_file:
