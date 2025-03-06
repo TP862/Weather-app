@@ -37,7 +37,7 @@ function getJsonData() {
         }
         return Response.json();
     })
-    .then(data => document.getElementById("result").textContent = data.temp)
+    .then(data => document.getElementById("result").textContent = data)
     .catch(error => {
         console.error('Error reading json file: ', error)
     });
